@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mundo.gd" type="Script" id=2]
+[ext_resource path="res://interfaz.tscn" type="PackedScene" id=3]
+[ext_resource path="res://level1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://level2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://imgs/grey-dark-vintage-background-texture.jpg" type="Texture" id=6]
+
+[node name="mundo" type="Node"]
+script = ExtResource( 2 )
+
+[node name="fondo" type="TextureRect" parent="."]
+show_behind_parent = true
+light_mask = 0
+margin_left = -92.6272
+margin_top = -60.9991
+margin_right = 1170.37
+margin_bottom = 683.001
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 510.4, 887.704 )
+
+[node name="scoreTimer" type="Timer" parent="."]
+wait_time = 0.012
+
+[node name="inicioTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="posicionDeInicio" type="Position2D" parent="."]
+position = Vector2( 530.352, 294.726 )
+
+[node name="interfaz" parent="." instance=ExtResource( 3 )]
+
+[node name="level1" parent="." instance=ExtResource( 4 )]
+position = Vector2( -13.7076, -11.7634 )
+
+[node name="gameOver" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="level2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1076.77, -13.4542 )
+
+[node name="passLevelTimer" type="Timer" parent="."]
+wait_time = 3.0
+[connection signal="golpe" from="Player" to="." method="gameOver"]
+[connection signal="timeout" from="scoreTimer" to="." method="_on_scoreTimer_timeout"]
+[connection signal="timeout" from="inicioTimer" to="." method="_on_inicioTimer_timeout"]
+[connection signal="iniciarJuego" from="interfaz" to="." method="nuevoJuego"]
+[connection signal="correct" from="level1" to="." method="_on_level1_correct"]
+[connection signal="error" from="level1" to="." method="_on_level1_error"]
+[connection signal="secondCorrect" from="level2" to="." method="_on_level2_secondCorrect"]
+[connection signal="secondError" from="level2" to="." method="_on_level2_secondError"]
