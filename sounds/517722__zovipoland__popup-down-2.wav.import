@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/517722__zovipoland__popup-down-2.wav-1d680f358564407a341d2201f9bc1573.sample"
+
+[deps]
+
+source_file="res://sounds/517722__zovipoland__popup-down-2.wav"
+dest_files=[ "res://.import/517722__zovipoland__popup-down-2.wav-1d680f358564407a341d2201f9bc1573.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

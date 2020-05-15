@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/517711__zovipoland__alert-3-long.wav-4968a639db5b648d089530c7fe41b808.sample"
+
+[deps]
+
+source_file="res://sounds/517711__zovipoland__alert-3-long.wav"
+dest_files=[ "res://.import/517711__zovipoland__alert-3-long.wav-4968a639db5b648d089530c7fe41b808.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

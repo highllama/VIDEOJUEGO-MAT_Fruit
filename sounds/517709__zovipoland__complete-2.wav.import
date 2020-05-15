@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/517709__zovipoland__complete-2.wav-6b4e5d60c70d6822c7a44a8f60f1c981.sample"
+
+[deps]
+
+source_file="res://sounds/517709__zovipoland__complete-2.wav"
+dest_files=[ "res://.import/517709__zovipoland__complete-2.wav-6b4e5d60c70d6822c7a44a8f60f1c981.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
